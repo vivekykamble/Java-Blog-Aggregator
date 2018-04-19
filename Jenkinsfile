@@ -5,6 +5,12 @@ pipeline {
       steps {
         sh '''mvn clean
 '''
+        sh 'cd $home'
+      }
+    }
+    stage('Change Directory') {
+      steps {
+        sh 'cd $home'
       }
     }
   }
